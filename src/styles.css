@@ -1,0 +1,185 @@
+/* styles.css */
+body { 
+    margin: 0; 
+    font-family: 'Arial', sans-serif; 
+  }
+  
+  header {
+    background-color: #34495e; /* A dark background */
+    color: white; /* White text */
+    padding: 20px; 
+    text-align: center;  
+    display: flex; /* Enable Flexbox for layout */
+    align-items: center; /* Vertical centering */
+    justify-content: center; /* Center elements */
+  }
+  
+  header img {
+    max-width: 100px; /* Limit logo size */
+    height: auto; 
+    border-radius: 10px; 
+  }
+  
+  header h1 {
+    font-size: 3.5em; /* Larger for desktop */
+    margin: 15px; 
+    padding: 6px;
+    font-family:  cursive;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); 
+    background: linear-gradient(to right, #b3ffab, #12fff7); 
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+  }
+  
+  .article-container { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+  }
+  
+  .article-card {
+    background-color: #fff; 
+    border: none; 
+    border-radius: 12px; 
+    padding: 25px; 
+    margin-bottom: 25px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out; 
+    width: 700px; 
+    position: relative; /* Make the card a positioning context */
+  }
+  
+  .article-card:hover {
+      transform: translateY(-3px); 
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .article-card h2 {
+    color: #34495e; 
+    margin-bottom: 10px;
+    font-weight: 600; 
+  }
+  
+  .article-card h2:hover {
+    color: #2ecc71; 
+    text-decoration: underline; 
+  }
+  
+  /* Ratio Container Styles */
+  .article-card .ratio-container {
+    overflow: hidden;
+    position: absolute; 
+    top: 0; left: 0; bottom: 0; right: 0; 
+  }
+  
+  .article-card .ratio-container::before { 
+    content: '';
+    display: block;
+    width: 100%; 
+    padding-bottom: 50%; /* 2:1 aspect ratio */
+  }
+  
+  /* Image Styles */
+  .article-card img {
+    max-width: 100%;
+    height: 100%; /* Fill the ratio container */
+    object-fit: cover; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Add spacing below image if needed */
+    border-radius: 5px; 
+  }
+  
+  .article-card p {
+    opacity: 0.8;  
+    line-height: 1.6;  
+  }
+  
+  .article-card::before { 
+    content: '';
+    position: absolute;
+    top: 10px; 
+    left: 10px;  
+    height: 6px;
+    width: 30px;
+    background-color: #f9ca24;   
+    opacity: 0.7; 
+    transform: translateY(-50%); 
+  }
+  a { 
+    text-decoration: none; 
+    color: inherit;  
+}
+ 
+ .article-content{
+    display: flex;
+    flex-direction: row;
+
+ } 
+
+.article-content img {
+ width: 100px;
+ height: 100px;
+ vertical-align: bottom;
+ padding-right: 30px;
+ margin-top: 10px;
+} 
+
+
+
+
+
+  @media (max-width: 768px) { 
+
+    .article-card {
+        background-color: #fff; 
+        border: none; 
+        border-radius: 12px; 
+        padding: 25px; 
+        margin-bottom: 25px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease-in-out; 
+        width: 300px; 
+        position: relative; /* Make the card a positioning context */
+      }
+
+      .article-content img {
+        width: 100px;
+        height: 100px;
+        vertical-align: bottom;
+        padding-right: 30px;
+        margin-top: 50px;
+       } 
+       
+
+
+    header h1 {
+      font-size: 2.3em;  
+    }
+  
+    .article-card .ratio-container::before {
+      padding-bottom: 60%; /*  Change the aspect ratio if needed on mobile */
+
+    }
+  }
+  
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #ddd;
+    position: fixed; /* Make it fixed */
+    bottom: 0; 
+    width: 100%; /* Ensure footer spans the full width */
+  }
+  
